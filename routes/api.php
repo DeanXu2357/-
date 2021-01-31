@@ -19,4 +19,3 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/transaction', [\App\Http\Controllers\TransactionController::class, 'trans']);
-Route::post('/transaction/one', [\App\Http\Controllers\TransactionController::class, 'transOneTime']);

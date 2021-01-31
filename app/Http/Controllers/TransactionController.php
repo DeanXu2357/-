@@ -55,32 +55,4 @@ class TransactionController
 
         return new JsonResponse(['msg' => 'ok']);
     }
-
-//    public function transOneTime(Request $request)
-//    {
-//        $request->validate(
-//            [
-//                'amount' => 'required|integer|min:1',
-//                'payer_id' => 'required|integer',
-//                'receiver_id' => 'required|integer',
-//            ]
-//        );
-//
-//        $amount = (int)($request->get('amount'));
-//        $payerId = $request->get('payer_id');
-//        $receiverId = $request->get('receiver_id');
-//
-//        DB::transaction(function () use ($amount, $receiverId, $payerId) {
-//            $affect = DB::affectingStatement('');
-//
-//            if ($affect === 0) {
-//                throw new \Exception('transaction failed');
-//            }
-//
-//            BalanceLog::create(['user_id' => $payerId, 'amount' => $amount, 'transaction_type' => BalanceLog::TRANS_PAY]);
-//            BalanceLog::create(['user_id' => $receiverId, 'amount' => $amount, 'transaction_type' => BalanceLog::TRANS_RECEIVE]);
-//        });
-//
-//        return new JsonResponse(['msg' => 'ok']);
-//    }
 }
